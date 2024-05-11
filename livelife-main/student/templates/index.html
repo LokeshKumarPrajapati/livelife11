@@ -1,0 +1,905 @@
+{% load static %}
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="DynamicLayers">
+
+    <title>LiveLife</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+    <!-- Font Awesome Icons CSS -->
+    <!-- Add this link tag in the head section of your HTML -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <!-- Themify Icons CSS -->
+    <link rel="stylesheet" href="{% static '/css/themify-icons.css' %}">
+    <!-- Elegant Font Icons CSS -->
+    <link rel="stylesheet" href="{% static 'css/elegant-font-icons.css'%}">
+    <!-- Elegant Line Icons CSS -->
+    <link rel="stylesheet" href="{% static 'css/elegant-line-icons.css' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Venobox CSS -->
+    <link rel="stylesheet" href="{% static 'css/venobox/venobox.css' %}">
+    <!-- OWL-Carousel CSS -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+    <!-- Slick Nav CSS -->
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}">
+    <!-- Css Animation CSS -->
+    <link rel="stylesheet" href="{% static 'css/css-animation.min.css' %}">
+    <!-- Nivo Slider CSS -->
+    <link rel="stylesheet" href="{% static 'css/nivo-slider.css' %}">
+    <!-- Main CSS -->
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+    <script src="{% static 'js/vendor/modernizr-2.8.3-respond-1.4.2.min.js'%}"></script>
+
+</head>
+
+
+<style>
+    /* Adjusting layout for mobile devices */
+    @media screen and (max-width: 768px) {
+        .elementor-column {
+            width: 100% !important;
+        }
+    }
+
+    /* Styling the headings */
+    .elementor-heading-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+
+
+
+
+    /* Styling the container */
+    .elementor-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+</style>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="site-preloader-wrap">
+        <div class="spinner"></div>
+    </div><!-- Preloader -->
+
+    <header id="header" class="header-section">
+
+        <div class="bottom-header">
+            <div class="container">
+                <div class="bottom-content-wrap row">
+                    <div class="col-sm-4" style="text-align: left;"> <!-- Modified this line -->
+                        <div class="site-branding">
+                            <a href="home"><img src="{% static 'img/logo.png' %}" alt="Brand"></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 text-right">
+                        <ul id="mainmenu" class="nav navbar-nav nav-menu">
+                            <li class="active"> <a href="home">Home</a></li>
+                            <li><a href="#events">Event</a></li>
+                            <li> <a href="rescue">Rescue</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#mission-section">Our Mission</a></li>
+                            <li> <a href="certificate">Certificate</a></li>
+                            <li> <a href="#a115">Contact</a></li>
+                        </ul>
+                        <a href="#"
+                            style="display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50%; background-color: #ff6900; color: #fff; text-decoration: none; border: none; outline: none; cursor: pointer;"
+                            onclick="openLoginPage()">
+                            <i class="fa fa-user" style="font-size: 24px;"></i>
+                        </a>
+                        <script>
+                            function openLoginPage() {
+                                // Open login page
+                                window.open('login', '_blank');
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header><!-- /Header Section -->
+
+    <div class="header-height"></div>
+
+
+     <section class="slider-section">
+        <div class="slider-wrapper">
+            <div id="main-slider" class="nivoSlider">
+                <img src="{% static 'img/slider-1.jpg' %}" alt="" title="#slider-caption-1" />
+                <img src="{% static 'img/slider-2.jpg' %}" alt="" title="#slider-caption-2" />
+                <img src="{% static 'img/slider-3.jpg' %}" alt="" title="#slider-caption-3" />
+            </div><!-- /#main-slider -->
+
+            <div id="slider-caption-1" class="nivo-html-caption slider-caption">
+                <div class="display-table">
+                    <div class="table-cell">
+                        <div class="container">
+                            <div class="slider-text">
+                                <h5 class="wow cssanimation fadeInBottom">Join Us Today</h5>
+                                <h1 class="wow cssanimation leFadeInRight sequence">Better Life for People</h1>
+                                <p class="wow cssanimation fadeInTop" data-wow-delay="1s">Help today because tomorrow
+                                    you may be the one who needs helping! <br>Forget what you can get and see what you
+                                    can give.</p>
+
+
+                                <a href="#" class="default-btn wow cssanimation fadeInBottom" data-wow-delay="0.8s"
+                                    onclick="openDonationPopup()">Donate Now</a>
+
+
+                                    <div id="donation-popup" class="donation-popup" onclick="closeDonationPopup()">
+                                        <div class="donation-popup-content" onclick="event.stopPropagation();">
+                                            <span class="close-btn" onclick="closeDonationPopup()">&times;</span>
+                                            <h2>Make a Donation</h2>
+                                            <!-- QR Code Image Section (placed to the left of the form) -->
+                                            <div class="qr-code-section" style="display: inline-block; vertical-align: top; margin-right: 20px;">
+                                                <h3>Scan the QR Code to Make Payment</h3>
+                                                <br><br><br><br>
+                                                <img src="{% static 'img/qr.jpg' %}" alt="QR Code" id="qr-code-image" style="max-width: 200px; position: absolute; top: 6rem; left: 9rem;">
+                                                <br><br><br><br>
+                                            </div>
+                                            <!-- Donation Form -->
+                                            <div class="form-container" style="display: inline-block;">
+                                                <form id="donation-form">
+                                                    <div class="form-group">
+                                                        <label for="amount">Enter Donation Amount (Rs):</label>
+                                                        <input type="number" id="amount" name="amount" class="form-control" placeholder="Enter Amount" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="category">Select Donation Category:</label>
+                                                        <select id="category" name="category" class="form-control" required>
+                                                            <option value="" selected disabled>Select Category</option>
+                                                            <option value="Literacy Programs">Literacy Programs</option>
+                                                            <option value="Blood Camp">Blood Camp</option>
+                                                            <option value="Education">Education</option>
+                                                            <option value="Community Development Project">Community Development Project</option>
+                                                            <option value="Environmental Conservation">Environmental Conservation</option>
+                                                            <option value="Child Welfare & Protection">Child Welfare & Protection</option>
+                                                            <option value="Social Services">Social Services</option>
+                                                            <option value="Disability Services">Disability Services</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="name">Your Name:</label>
+                                                        <input type="text" id="name" name="name" class="form-control" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="email">Your Email:</label>
+                                                        <input type="email" id="email" name="email" class="form-control" required>
+                                                    </div>
+                                                    <button type="button" class="btn btn-primary btn-block" onclick="submitDonation()">Donate</button>
+                                                </form>
+                                            </div>
+                                            <div id="success-message" class="alert alert-success" style="display: none;"></div>
+                                        </div>
+                                    </div>
+                                    
+
+                                <script>
+                                    function closeDonationPopup() {
+    document.getElementById("donation-popup").style.display = "none";
+}
+
+                                </script>
+
+
+
+                                <style>
+                                    .donation-popup-content {
+                                        overflow-y: auto;
+                                        /* Enable vertical scrollbar */
+                                        scrollbar-width: thin;
+                                        /* For Firefox */
+                                        scrollbar-color: #888 #f5f5f5;
+                                        /* For Firefox */
+                                        max-height: 80vh;
+                                        /* Limit maximum height */
+                                    }
+
+                                    .donation-popup-content::-webkit-scrollbar {
+                                        width: 10px;
+                                        /* Width of the scrollbar */
+                                    }
+
+                                    /* Track */
+                                    .donation-popup-content::-webkit-scrollbar-track {
+                                        background: #f5f5f5;
+                                        /* Color of the track */
+                                    }
+
+                                    /* Handle */
+                                    .donation-popup-content::-webkit-scrollbar-thumb {
+                                        background: #888;
+                                        /* Color of the handle */
+                                        border-radius: 5px;
+                                        /* Rounded corners */
+                                    }
+
+                                    /* Handle on hover */
+                                    .donation-popup-content::-webkit-scrollbar-thumb:hover {
+                                        background: #555;
+                                        /* Darker color of the handle */
+                                    }
+                                </style>
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /#slider-caption-1 -->
+
+        </div>
+    </section><!-- /#slider-Section -->
+    
+    <section style="position: relative; width: 100%; height: 10vh; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <div style="white-space: nowrap; animation: marquee 20s linear infinite;">
+            {% for donor in donors %}
+            <span style="padding-right: 20px;">{{ donor.name }}</span>
+            {% endfor %}
+            <!-- Add more donor names as needed -->
+        </div>
+    </section>
+    
+    <style>
+        @keyframes marquee {
+            0% {
+                transform: translateX(-100%);
+            }
+    
+            100% {
+                transform: translateX(calc(100% + 100vw));
+            }
+        }
+    
+        span {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+    
+        /* Donation Popup Styles */
+        .donation-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+        }
+    
+        .donation-popup-content {
+            background-color: #fff;
+            width: 60%;
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+    
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    
+        /* Donation Form Styles (customize as needed) */
+        #donation-form {
+            text-align: center;
+        }
+    
+        #donation-form label {
+            color: black;
+            display: block;
+            margin-bottom: 10px;
+        }
+    
+        #donation-form input[type="number"],
+        #donation-form input[type="text"],
+        #donation-form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    
+        #donation-form button {
+            background-color: #ff6900;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+    
+
+
+    <section id="events" class="causes-section bg-grey bd-bottom padding">
+        <div class="container">
+            <div class="section-heading text-center mb-40">
+                <h2 class="animate__animated animate__fadeInUp">Featured Stories & Latest Events</h2>
+                <span class="heading-border animate__animated animate__fadeIn"></span>
+                <p class="animate__animated animate__fadeInDown">Help today because tomorrow you may be the one who needs more helping!</p>
+            </div><!-- /Section Heading -->
+            <div class="causes-wrap row">
+                {% for cause in donation_causes %}
+                <div class="col-md-4 xs-padding animate__animated animate__fadeInLeft">
+                    <div class="causes-content">
+                        <div class="causes-thumb">
+                            <img src="{{ MEDIA_URL }}{{ cause.image.url }}" alt="causes" class="animate__animated animate__fadeIn">
+                            <a href="events" class="donate-btn animate__animated animate__fadeIn">Donate Now<i class="ti-plus"></i></a>
+                        </div>
+                        <div class="causes-details">
+                            <h3 class="animate__animated animate__fadeIn">{{ cause.cause_title }}</h3>
+                            <p class="animate__animated animate__fadeIn">{{ cause.cause_description }}</p>
+                            <div class="donation-box">
+                                <p class="animate__animated animate__fadeIn"><i class="ti-bar-chart"></i>Goal: ₹{{ cause.goal_amount }}</p>
+                                <p class="animate__animated animate__fadeIn"><i class="ti-thumb-up"></i>Raised: ₹{{ cause.raised_amount }}</p>
+                            </div>
+                            <a href="#a115" id="joinButton" class="default-btn animate__animated animate__fadeIn">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+    
+            <br><br>
+            <center class="animate__animated animate__fadeInUp">
+                <a href="event" class="default-btn">View More Events</a>
+            </center>
+        </div>
+    </section>
+    
+
+
+    <section id="services"
+        class="elementor-section elementor-top-section elementor-element elementor-element-309825f elementor-section-boxed elementor-section-height-default elementor-section-height-default cmsmasters-block-default"
+        data-id="309825f" data-element_type="section"
+        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"
+        style="text-align: center; background-color: #edf0d7;">
+        <div class="elementor-container elementor-column-gap-no"
+            style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3b5c6d4"
+                data-id="3b5c6d4" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <section
+                        class="elementor-section elementor-inner-section elementor-element elementor-element-79e1ace elementor-section-boxed elementor-section-height-default elementor-section-height-default cmsmasters-block-default"
+                        data-id="79e1ace" data-element_type="section" style="margin-bottom: 20px;">
+                        <div class="elementor-container elementor-column-gap-wide">
+                            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-d720852"
+                                data-id="d720852" data-element_type="column">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-cac00cc elementor-widget__width-initial cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-heading"
+                                        data-id="cac00cc" data-element_type="widget" data-widget_type="heading.default"
+                                        style="margin-bottom: 0;">
+                                        <div class="elementor-widget-container">
+                                            <h2 class="elementor-heading-title elementor-size-default"
+                                                style="font-size: 32px; font-weight: bold; padding-top: 20vh;">Our
+                                                Services</h2>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-b02a195 elementor-widget__width-initial cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-heading"
+                                        data-id="b02a195" data-element_type="widget" data-widget_type="heading.default"
+                                        style="margin-bottom: 0;">
+                                        <div class="elementor-widget-container">
+                                            <h2 class="elementor-heading-title elementor-size-default"
+                                                style="font-size: 32px; font-weight: bold;"></h2>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-cf1db56 cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-heading"
+                                        data-id="cf1db56" data-element_type="widget" data-widget_type="heading.default"
+                                        style="margin-bottom: 20px;">
+                                        <div class="elementor-widget-container">
+                                            <h2 class="elementor-heading-title elementor-size-default"></h2>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-06bb80f cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-heading"
+                                        data-id="06bb80f" data-element_type="widget" data-widget_type="heading.default"
+                                        style="margin-bottom: 40px;">
+                                        <div class="elementor-widget-container">
+                                            <p class="elementor-heading-title elementor-size-default"
+                                                style="font-size: 18px;">Select a cause you want to get involved in.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section
+                        class="elementor-section elementor-inner-section elementor-element elementor-element-48813d0 elementor-section-boxed elementor-section-height-default elementor-section-height-default cmsmasters-block-default"
+                        data-id="48813d0" data-element_type="section" style="margin-bottom: 20px;">
+                        <div class="elementor-container elementor-column-gap-wide">
+                            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-b7d3fdf"
+                                data-id="b7d3fdf" data-element_type="column">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-9ef516c elementor-widget__width-initial cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-cmsmasters-button"
+                                        data-id="9ef516c" data-element_type="widget"
+                                        data-widget_type="cmsmasters-button.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="elementor-widget-cmsmasters-button__button-container">
+                                                <div class="elementor-widget-cmsmasters-button__button-container-inner"
+                                                    style="padding-bottom: 20vh;">
+                                                    <a href="campaign_category/child-protection/index"
+                                                        class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm"
+                                                        role="button" style="display: inline-block; padding: 10px 20px; background-color: #ff6900;
+; color: #fff; text-decoration: none; border-radius: 5px; margin-right: 10px; margin-bottom: 10px;"><span
+                                                            class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-"><span
+                                                                class="elementor-widget-cmsmasters-button__text">Literacy
+                                                                Programs</span></span></a>
+                                                    <a href="campaign_category/animal-rescue/index"
+                                                        class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm"
+                                                        role="button" style="display: inline-block; padding: 10px 20px; background-color: #ff6900;
+; color: #fff; text-decoration: none; border-radius: 5px; margin-right: 10px; margin-bottom: 10px;"><span
+                                                            class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-"><span
+                                                                class="elementor-widget-cmsmasters-button__text">Blood
+                                                                Camp</span></span></a>
+                                                    <a href="campaign_category/stop-war/index"
+                                                        class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm"
+                                                        role="button" style="display: inline-block; padding: 10px 20px; background-color: #ff6900;
+; color: #fff; text-decoration: none; border-radius: 5px; margin-right: 10px; margin-bottom: 10px;"><span
+                                                            class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-"><span
+                                                                class="elementor-widget-cmsmasters-button__text">Education</span></span></a>
+                                                    <a href="campaign_category/the-wild/index"
+                                                        class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm"
+                                                        role="button" style="display: inline-block; padding: 10px 20px; background-color: #ff6900;
+; color: #fff; text-decoration: none; border-radius: 5px; margin-right: 10px; margin-bottom: 10px;"><span
+                                                            class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-"><span
+                                                                class="elementor-widget-cmsmasters-button__text">Community
+                                                                Development project</span></span></a>
+                                                    <a href="campaign_category/pollution-problem/index"
+                                                        class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm"
+                                                        role="button" style="display: inline-block; padding: 10px 20px; background-color: #ff6900;
+; color: #fff; text-decoration: none; border-radius: 5px; margin-right: 10px; margin-bottom: 10px;"><span
+                                                            class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-"><span
+                                                                class="elementor-widget-cmsmasters-button__text">Environmental
+                                                                conservation</span></span></a>
+                                                    <a href="campaign_category/pollution-problem/index"
+                                                        class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm"
+                                                        role="button" style="display: inline-block; padding: 10px 20px; background-color: #ff6900;
+; color: #fff; text-decoration: none; border-radius: 5px; margin-right: 10px; margin-bottom: 10px;"><span
+                                                            class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-"><span
+                                                                class="elementor-widget-cmsmasters-button__text">Child
+                                                                Welfare &amp; Protection</span></span></a>
+                                                    <a href="campaign_category/pollution-problem/index"
+                                                        class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm"
+                                                        role="button" style="display: inline-block; padding: 10px 20px; background-color: #ff6900;
+; color: #fff; text-decoration: none; border-radius: 5px; margin-right: 10px; margin-bottom: 10px;"><span
+                                                            class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-"><span
+                                                                class="elementor-widget-cmsmasters-button__text">Socail
+                                                                Services</span></span></a>
+                                                    <a href="campaign_category/pollution-problem/index"
+                                                        class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm"
+                                                        role="button" style="display: inline-block; padding: 10px 20px; background-color: #ff6900;
+; color: #fff; text-decoration: none; border-radius: 5px; margin-right: 10px; margin-bottom: 10px;"><span
+                                                            class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-"><span
+                                                                class="elementor-widget-cmsmasters-button__text">Disability
+                                                                Services</span></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Add other buttons in similar fashion -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <div class="sponsor-section bd-bottom">
+        <div class="container">
+          <ul id="sponsor-carousel" class="sponsor-items owl-carousel">
+      
+            {% for sponsor in sponsors %}
+            <li class="sponsor-item">
+              <img src="{{ sponsor.logo.url }}" alt="{{ sponsor.name }}">
+            </li>
+            {% endfor %}
+      
+          </ul>
+        </div>
+      </div>
+
+
+
+    
+
+
+
+
+    <section id="mission-section" class="mission-section bg-grey bd-bottom circle shape padding">
+        <div class="container">
+            <div class="section-heading text-center mb-40">
+                <h2>Our Mission</h2>
+                <span class="heading-border"></span>
+                <p>Together, let's make a difference!</p>
+            </div><!-- /Section Heading -->
+            <div class="mission-wrapper row">
+                <div class="col-lg-6 sm-padding">
+                    <div class="mission-images row">
+                        <div class="col-md-6">
+                            <div class="mission-details">
+                                <img src="./{% static 'img/events-3.jpg'%}" alt="mission">
+                                <!-- Replace with an image representing one aspect of your mission -->
+                            </div>
+                        </div><!-- /Mission Image 1 -->
+
+                    </div>
+                </div>
+                <div class="col-lg-6 sm-padding">
+                    <div class="mission-content">
+                        <h2>Empowering Communities, Transforming Lives</h2>
+                        <p>At LiveLife, our mission is to create positive change and uplift communities in need. We are
+                            dedicated to:</p>
+                        <ul>
+                            <li>Providing access to education, healthcare, and basic necessities for marginalized
+                                individuals and families.</li>
+                            <li>Empowering women and youth through skill-building programs and opportunities for
+                                economic independence.</li>
+                            <li>Promoting environmental sustainability and conservation efforts for a greener future.
+                            </li>
+                            <li>Advocating for social justice, equality, and human rights for all.</li>
+                        </ul>
+                        <p>We believe that by working together and harnessing the power of compassion and collaboration,
+                            we can create a world where everyone has the opportunity to thrive. Join us in our mission
+                            to make a lasting impact and build a brighter future for generations to come.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- /Mission Section -->
+
+
+    <section id="counter" class="counter-section">
+        <div class="container">
+            <ul class="row counters">
+                <li class="col-md-3 col-sm-6 sm-padding">
+                    <div class="counter-content">
+                        <i>₹</i>
+                        <h3 class="counter">85389</h3>
+                        <h4 class="text-white">Money Donated</h4>
+                    </div>
+                </li>
+                <li class="col-md-3 col-sm-6 sm-padding">
+                    <div class="counter-content">
+                        <i class="ti-face-smile"></i>
+                        <h3 class="counter">10693</h3>
+                        <h4 class="text-white">Volunteer Around The World</h4>
+                    </div>
+                </li>
+                <li class="col-md-3 col-sm-6 sm-padding">
+                    <div class="counter-content">
+                        <i class="ti-user"></i>
+                        <h3 class="counter">50177</h3>
+                        <h4 class="text-white">People Impacted</h4>
+                    </div>
+                </li>
+                <li class="col-md-3 col-sm-6 sm-padding">
+                    <div class="counter-content">
+                        <i class="ti-comments"></i>
+                        <h3 class="counter">669</h3>
+                        <h4 class="text-white">Positive Feedbacks</h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section><!-- Counter Section -->
+
+
+
+
+    <section class="blog-section bg-grey bd-bottom padding">
+        <div class="container">
+            <div class="section-heading text-center mb-40">
+                <h2>Blog</h2>
+                <span class="heading-border"></span>
+                <p>Help today because tomorrow you may be the one who <br> needs more helping!</p>
+            </div><!-- /Section Heading -->
+            <div class="col-lg-12 xs-padding">
+                <div class="blog-items grid-list row">
+                    {% for post in latest_posts %}
+                    <div class="col-md-4 padding-15">
+                        <div class="blog-post">
+                            {% if post.image %} 
+                            <img src="{{ post.image.url }}" alt="blog post">
+                            {% else %}
+                            <img src="{% static 'img/default-blog-image.jpg' %}" alt="blog post">
+                            {% endif %}
+                            <div class="blog-content">
+                                <span class="date"><i class="fa fa-clock-o"></i> {{ post.pub_date|date:'F d.Y'}}</span>
+                                <h3><a href="#">{{ post.title }}</a></h3>
+
+                                <p>{{ post.content|truncatechars:150 }}</p>
+                                <!-- <a href="#" class="post-meta">Read More</a> -->
+
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+    <div class="container", id="a115">
+        <div class="row contact-wrap" >
+            <div class="col-md-6 xs-padding">
+                <div class="contact-info">
+                    <h3>Get in touch</h3>
+                    <p>The secret to happiness lies in helping others. Never underestimate the difference YOU can make
+                        in the lives of the poor, the abused and the helpless.</p>
+                    <p>The secret to happiness lies in helping others. Never underestimate the difference.</p>
+                    <ul>
+                        <li><i class="ti-location-pin"></i> Lovely Professional university
+                        </li>
+
+                        <li><i class="ti-email"></i> non.gov.organaization@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 xs-padding">
+                <div class="contact-form">
+                    <h3>Contact Us / Join Event</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+
+                    {% if form %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ form.non_field_errors }} </div>
+                    {% endif %}
+
+                    <form action="{% url 'index' %}" method="post" id="contact_form">
+                        {% csrf_token %} <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name"
+                                required>
+                            {% if form %}
+                            <div class="invalid-feedback">{{ form.name.errors }}</div> {% endif %}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Enter your email" required>
+                            {% if form %}
+                            <div class="invalid-feedback">{{ form.email.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea class="form-control" id="message" name="message" rows="3"
+                                placeholder="Write your message here" required></textarea>
+                            {% if form %}
+                            <div class="invalid-feedback">{{ form.message.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="purpose">Purpose:</label>
+                            <select class="form-control" id="purpose" name="purpose" required>
+                                <option value="">Select Purpose</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="event_join">Join Event</option>
+                            </select>
+                            {% if form %}
+                            <div class="invalid-feedback">{{ form.purpose.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="form-group" id="event_name_field">
+                            <label for="event_name">Event Name (if joining event):</label>
+                            <input type="text" class="form-control" id="event_name" name="event_name"
+                                placeholder="Enter event name (optional)">
+                            {% if form %}
+                            <div class="invalid-feedback">{{ form.event_name.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="widget-section padding">
+        <div class="container">
+            <div class="widget-wrap row">
+                <div class="col-md-4 xs-padding">
+                    <div class="widget-content">
+
+                        <p><b>Live Life</b> <br>
+                            Better Tomorrow
+                            Empowering communities through dedicated social service—where every effort is a step toward
+                            a more compassionate world
+                            We Rise By Lifting Others</p>
+                        <ul class="social-icon">
+                            <li><a href="https://www.facebook.com/profile.php?id=61557310328344&sk=photos"><i
+                                        class="fa fa-facebook"></i></a></li>
+
+                            <li><a href="https://www.instagram.com/live_life_orgn/"><i class="fa fa-instagram"></i></a>
+                            </li>
+                            <li><a href="https://www.blogger.com/blog/posts/5689730597296574125"><i
+                                        class="fa fa-pinterest"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/live-life-1829582ba/"><i
+                                        class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 xs-padding">
+                    <div class="widget-content">
+                        <h3>Recent Campaigns</h3>
+                        <ul class="widget-link">
+                            <li><a href="#">First charity activity of this summer. <span>-1 Year Ago</span></a></li>
+                            <li><a href="#">Big charity: build school for poor children. <span>-2 Year Ago</span></a>
+                            </li>
+                            <li><a href="#">Clean-water system for rural poor. <span>-2 Year Ago</span></a></li>
+                            <li><a href="#">Nepal earthqueak donation campaigns. <span>-3 Year Ago</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 xs-padding">
+                    <div class="widget-content">
+                        <h3>Charitify Location</h3>
+                        <ul class="address">
+                            <li><i class="ti-email"></i> non.gov.organaization@gmail.com</li>
+                            <li><i class="ti-mobile"></i> +91 73640 58914</li>
+
+                            <li><i class="ti-location-pin"></i> Lovely professional University, Punjab</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- ./Widget Section -->
+
+
+
+
+    <footer class="footer-section">
+        <div class="container">
+            <center>
+                <p style="color: #fff;">2021 LiveLife</p>
+            </center>
+
+        </div>
+    </footer><!-- /Footer Section -->
+
+    <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_up"></i></a>
+
+    <script>
+        // Open Donation Popup
+        function openDonationPopup() {
+            document.getElementById('donation-popup').style.display = 'block';
+        }
+
+        // Close Donation Popup
+        function closeDonationPopup() {
+            document.getElementById('donation-popup').style.display = 'none';
+        }
+
+        // Donation Form Submission
+        document.getElementById('donation-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            submitDonation();
+        });
+
+        function submitDonation() {
+            var form = document.getElementById('donation-form');
+            var amount = document.getElementById('amount').value;
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+
+            // Start timer for showing success message after random time between 20 to 40 seconds
+            var randomTime = Math.floor(Math.random() * (40000 - 20000)) + 20000; // Random time between 20 to 40 seconds in milliseconds
+            setTimeout(function () {
+                // Display success message
+                var successMessage = document.getElementById('success-message');
+                successMessage.innerHTML = 'Payment of Rs ' + amount + ' was successful &#10004;';
+                successMessage.style.display = 'block';
+                successMessage.style.color = 'green'; // Set color to green
+                successMessage.style.fontWeight = 'bold'; // Make text bold
+            }, randomTime);
+
+            // Display timer while waiting for success message
+            var button = form.querySelector('button[type="button"]');
+            button.innerHTML = 'Processing...';
+            button.disabled = true;
+
+            // Simulate form submission (you can add actual form submission logic here)
+            setTimeout(function () {
+                // Reset form after submission
+                form.reset();
+                // Enable submit button
+                button.innerHTML = 'Donate';
+                button.disabled = false;
+            }, randomTime);
+        }
+
+
+    </script>
+
+    <!-- jQuery Lib -->
+    
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js'%}"></script>
+    <!-- Bootstrap JS -->
+    <script src="{% static 'js/vendor/bootstrap.min.js'%}"></script>
+    <!-- Tether JS -->
+    <script src="{% static 'js/vendor/tether.min.js'%}"></script>
+    <!-- Imagesloaded JS -->
+    <script src="{% static 'js/vendor/imagesloaded.pkgd.min.js'%}"></script>
+    <!-- OWL-Carousel JS -->
+    <script src="{% static 'js/vendor/owl.carousel.min.js'%}"></script>
+    <!-- isotope JS -->
+    <script src="{% static 'js/vendor/jquery.isotope.v3.0.2.js'%}"></script>
+    <!-- Smooth Scroll JS -->
+    <script src=""></script>
+    <script src="{% static 'js/vendor/smooth-scroll.min.js'%}"></script>
+    <!-- venobox JS -->
+    <script src="{% static 'js/vendor/venobox.min.js'%}"></script>
+    <!-- ajaxchimp JS -->
+    <script src="{% static 'js/vendor/jquery.ajaxchimp.min.js'%}"></script>
+    <!-- Counterup JS -->
+    <script src=""></script>
+    <script src="{% static 'js/vendor/jquery.counterup.min.js'%}"></script>
+    <!-- waypoints js -->
+    <script src="{% static 'js/vendor/jquery.waypoints.v2.0.3.min.js'%}"></script>
+    <!-- Slick Nav JS -->
+    <script src="{% static 'js/vendor/jquery.slicknav.min.js'%}"></script>
+    <!-- Nivo Slider JS -->
+    <script src="{% static 'js/vendor/jquery.nivo.slider.pack.js'%}"></script>
+    <!-- Letter Animation JS -->
+    <script src="{% static 'js/vendor/letteranimation.min.js'%}"></script>
+    <!-- Wow JS -->
+    <script src="{% static 'js/vendor/wow.min.js'%}"></script>
+    <!-- Contact JS -->
+    <script src="{% static 'js/contact.js'%}"></script>
+    <!-- Main JS -->
+    <script src="{% static 'js/main.js'%}"></script>
+
+</body>
+
+</html>
