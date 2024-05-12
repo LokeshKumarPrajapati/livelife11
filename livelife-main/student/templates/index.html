@@ -82,16 +82,13 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <div class="site-preloader-wrap">
-        <div class="spinner"></div>
-    </div><!-- Preloader -->
 
-    <header id="header" class="header-section">
+    <!-- <header id="header" class="header-section">
 
         <div class="bottom-header">
             <div class="container">
                 <div class="bottom-content-wrap row">
-                    <div class="col-sm-4" style="text-align: left;"> <!-- Modified this line -->
+                    <div class="col-sm-4" style="text-align: left;"> 
                         <div class="site-branding">
                             <a href="home"><img src="{% static 'img/logo.png' %}" alt="Brand"></a>
                         </div>
@@ -122,7 +119,283 @@
             </div>
         </div>
 
-    </header><!-- /Header Section -->
+    </header> -->
+    <header>
+        <nav>
+            <ul class='nav-bar'>
+                <li class='logo'>  
+                    <a href="home"><img src="{% static 'img/logo.png' %}" alt="Brand"></a>
+                </li>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                    <li class="active"> <a href="home">Home</a></li>
+                    <li><a href="#events">Event</a></li>
+                    <li> <a href="rescue">Rescue</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#mission-section">Our Mission</a></li>
+                    <li> <a href="certificate">Certificate</a></li>
+                    <li> <a href="#a115">Contact</a></li>
+                    <!-- User dropdown -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-btn">User</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#" onclick="showForm('login-form-popup')">Login</a></li>
+                            <li><a href="#" onclick="showForm('register-form')">Register</a></li>
+                            <li><a href="#" onclick="showForm('register-ngo-form')">Register with NGO</a></li>
+                        </ul>
+                    </li>
+                    <!-- End of User dropdown -->
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="login-form-popup" class="form-popup">
+        <form class="form-container">
+            <!-- Login form -->
+            <h2>Login</h2>
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+    
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+    
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm('login-form-popup')">Close</button>
+        </form>
+    </div>
+    
+    <div id="register-form" class="form-popup">
+        <form class="form-container">
+            <!-- Register form -->
+            <h2>Register</h2>
+            <label for="fullname"><b>Full Name</b></label>
+            <input type="text" placeholder="Enter Full Name" name="fullname" required>
+    
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+    
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+    
+            <button type="submit" class="btn">Register</button>
+            <button type="button" class="btn cancel" onclick="closeForm('register-form')">Close</button>
+        </form>
+    </div>
+    
+    <div id="register-ngo-form" class="form-popup">
+        <form class="form-container">
+            <!-- Register with NGO form -->
+            <h2>Register with NGO</h2>
+            <label for="fullname"><b>Full Name</b></label>
+            <input type="text" placeholder="Enter Full Name" name="fullname" required>
+    
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+    
+            <label for="ngo"><b>NGO Name</b></label>
+            <input type="text" placeholder="Enter NGO Name" name="ngo" required>
+    
+            <button type="submit" class="btn">Register with NGO</button>
+            <button type="button" class="btn cancel" onclick="closeForm('register-ngo-form')">Close</button>
+        </form>
+    </div>
+    
+    <script>
+        function showForm(formId) {
+            document.getElementById(formId).style.display = "block";
+        }
+    
+        function closeForm(formId) {
+            document.getElementById(formId).style.display = "none";
+        }
+    </script>
+
+    
+    
+    
+    
+<script>
+// Function to display the form popup
+function showForm(formId) {
+    document.getElementById(formId).style.display = "block";
+}
+
+// Function to close the form popup
+function closeForm(formId) {
+    document.getElementById(formId).style.display = "none";
+}
+
+
+    var prevScrollPos = window.pageYOffset; // Track previous scroll position
+
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+
+    if (prevScrollPos > currentScrollPos) {
+        document.querySelector(".nav-bar").style.top = "0"; // Show the nav bar when scrolling up
+    } else {
+        document.querySelector(".nav-bar").style.top = "-100px"; // Hide the nav bar when scrolling down
+    }
+
+    prevScrollPos = currentScrollPos;
+};
+
+</script>
+        <style>
+            .form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.form-container {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    text-align: center;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    left: -90px;
+   
+    min-width: 200px;
+    padding-top: 50px;
+    
+    z-index: 0;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style the dropdown links */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+ 
+.nav-bar a:hover {
+    color: green; /* Change to desired color on hover */
+}
+
+/* Change color of text when active (current page) */
+.nav-bar a.active,
+.nav-bar a.active:hover {
+    color: green; /* Change to desired color for active link */
+}
+ .nav-bar {
+   
+   
+    z-index: 1000; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: var(--color2);
+    padding: 12px 20px;
+
+    position: fixed;
+    top: 0; /* Initially hide the navigation bar */
+    left: 0;
+ 
+    background-color: #ffffff; /* Change this to your desired background color */
+    transition: top 0.3s; /* Add transition for smooth animation */
+ 
+}
+.nav-bar.animation {
+    transition: background-color 0.3s ease-in-out; /* Example animation */
+    /* Add other animation styles as needed */
+}
+.logo img {width: 40px;}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px; /* Adjust font size as needed */
+    letter-spacing: 0; /* Remove letter spacing */
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {display: none;}
+@media(max-width: 610px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--color2);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+}
+
+        </style>
+    
 
     <div class="header-height"></div>
 
@@ -387,7 +660,7 @@
     </section>
     
 
-
+<!-- 
     <section id="services"
         class="elementor-section elementor-top-section elementor-element elementor-element-309825f elementor-section-boxed elementor-section-height-default elementor-section-height-default cmsmasters-block-default"
         data-id="309825f" data-element_type="section"
@@ -514,7 +787,111 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Add other buttons in similar fashion -->
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+      -->
+
+     <section id="services" class="elementor-section elementor-top-section elementor-element elementor-element-309825f elementor-section-boxed elementor-section-height-default elementor-section-height-default cmsmasters-block-default" data-id="309825f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" style="text-align: center; background-color: #edf0d7;">
+        <div class="elementor-container elementor-column-gap-no" style="margin: 0 auto; padding: 0 15px;">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3b5c6d4" data-id="3b5c6d4" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-79e1ace elementor-section-boxed elementor-section-height-default elementor-section-height-default cmsmasters-block-default" data-id="79e1ace" data-element_type="section" style="margin-bottom: 20px;">
+                        <div class="elementor-container elementor-column-gap-wide">
+                            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-d720852" data-id="d720852" data-element_type="column">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-cac00cc elementor-widget__width-initial cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-heading" data-id="cac00cc" data-element_type="widget" data-widget_type="heading.default" style="margin-bottom: 0;">
+                                        <div class="elementor-widget-container">
+                                            <h2 class="elementor-heading-title elementor-size-default" style="font-size: 32px; font-weight: bold; padding-top: 20vh;">Our Services</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-48813d0 elementor-section-boxed elementor-section-height-default elementor-section-height-default cmsmasters-block-default" data-id="48813d0" data-element_type="section" style="margin-bottom: 20px;">
+                        <div class="elementor-container elementor-column-gap-wide">
+                            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-b7d3fdf" data-id="b7d3fdf" data-element_type="column">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-06bb80f cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-heading"
+                                    data-id="06bb80f" data-element_type="widget" data-widget_type="heading.default"
+                                    style="margin-bottom: 40px;">
+                                    <div class="elementor-widget-container">
+                                        <p class="elementor-heading-title elementor-size-default"
+                                            style="font-size: 18px;">Select a cause you want to get involved in.</p>
+                                    </div>
+                                </div>
+                                    <div class="services-container">
+                                        
+                                        <!-- First Service -->
+                                        <div class="service-button" style="background-image: url('path_to_your_image1.jpg');">
+                                            <a href="campaign_category/child-protection/index" class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm" role="button">
+                                                <span class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-">
+                                                    <span class="elementor-widget-cmsmasters-button__text">LITERACY PROGRAMS</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- Second Service -->
+                                        <div class="service-button" style="background-image: url('path_to_your_image2.jpg');">
+                                            <a href="campaign_category/animal-rescue/index" class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm" role="button">
+                                                <span class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-">
+                                                    <span class="elementor-widget-cmsmasters-button__text">BLOOD CAMP</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- Third Service -->
+                                        <div class="service-button" style="background-image: url('path_to_your_image3.jpg');">
+                                            <a href="campaign_category/stop-war/index" class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm" role="button">
+                                                <span class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-">
+                                                    <span class="elementor-widget-cmsmasters-button__text">EDUCATION</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- Fourth Service -->
+                                        <div class="service-button" style="background-image: url('path_to_your_image4.jpg');">
+                                            <a href="campaign_category/education/index" class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm" role="button">
+                                                <span class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-">
+                                                    <span class="elementor-widget-cmsmasters-button__text">COMMUNITY DEVELOPMENT PROJECT</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="service-button" style="background-image: url('path_to_your_image4.jpg');">
+                                            <a href="campaign_category/education/index" class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm" role="button">
+                                                <span class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-">
+                                                    <span class="elementor-widget-cmsmasters-button__text">ENVIRONMENTAL CONSERVATION</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="service-button" style="background-image: url('path_to_your_image4.jpg');">
+                                            <a href="campaign_category/education/index" class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm" role="button">
+                                                <span class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-">
+                                                    <span class="elementor-widget-cmsmasters-button__text"> CHILD WELFARE & PROTECTION</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="service-button" style="background-image: url('path_to_your_image4.jpg');">
+                                            <a href="campaign_category/education/index" class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm" role="button">
+                                                <span class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-">
+                                                    <span class="elementor-widget-cmsmasters-button__text">SOCAIL SERVICES</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="service-button" style="background-image: url('..//static/img/causes-1.jpg');">
+                                            <a href="campaign_category/education/index" class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm" role="button">
+                                                <span class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-">
+                                                    <span class="elementor-widget-cmsmasters-button__text">DISABILITY SERVICES
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- Add more services in similar fashion -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -524,7 +901,85 @@
         </div>
     </section>
     
+    
+<style>
 
+.services-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center; /* Center items vertically */
+        margin: 0 auto; /* Horizontally center */
+        max-width: 1200px; /* Set maximum width */
+    }
+
+    /* Styles for service button */
+    .service-button {
+        width: calc(25% - 20px); /* Four cards per row on desktop */
+        margin-bottom: 20px;
+    }
+
+    /* Media query for mobile devices */
+    @media only screen and (max-width: 767px) {
+        
+        .service-button {
+            width: calc(100% - 20px); /* One card per row on mobile */
+        }
+    }
+    @media only screen and (max-width: 767px) {
+    .service-button {
+        margin: 0 auto
+    }}
+
+    .service-button {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+}
+
+.service-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    border-radius: 5px;
+}
+
+.service-button a:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust hover opacity as needed */
+}
+
+.service-button a span {
+    z-index: 1;
+}
+
+.service-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust overlay opacity as needed */
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Initially hide the overlay */
+}
+
+.service-button:hover::after {
+    opacity: 1; /* Show the overlay on hover */
+}
+
+</style>    
     <div class="sponsor-section bd-bottom">
         <div class="container">
           <ul id="sponsor-carousel" class="sponsor-items owl-carousel">
